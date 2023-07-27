@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "juspay-assignment-scratch",
+    "slug": "juspay-assignment-scratch",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/ios-icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-screen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.namankesari.juspayassignmentscratch"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/scratch-app-adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.namankesari.juspayassignmentscratch"
+    },
+    "web": {
+      "favicon": "./assets/playstore-icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "69fb5130-b269-422f-b50f-bea62068d0bc"
+      }
+    }
+  }
+}
