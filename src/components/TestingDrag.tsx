@@ -79,7 +79,7 @@ export const Draggable = ({
 
 export default function TestScreen() {
   const onAdd = () => {
-    console.log("added");
+    console.log("added object");
   };
 
   const [reset, setReset] = useState<boolean>(false);
