@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Scratch",
-    "slug": "Scratch",
+    "slug": "scratch",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/ios-icon.png",
@@ -30,7 +30,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "69fb5130-b269-422f-b50f-bea62068d0bc"
+        "projectId": "899218dd-7a22-4c88-8193-1c1d17a95795"
       }
     }
   }
