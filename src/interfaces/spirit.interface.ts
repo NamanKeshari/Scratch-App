@@ -1,6 +1,7 @@
 import { Animated } from "react-native";
 
 export interface ISpirit {
+  id: string;
   title: string;
   img: any;
   action: number;

@@ -1,4 +1,3 @@
-import { useLayoutEffect } from "react";
 import { Icon, IconButton } from "native-base";
 import ComponentLayout from "../layout/ComponentLayout";
 import { FontAwesome } from "@expo/vector-icons";
@@ -6,22 +5,11 @@ import spriteAtom, {
   animatingAtom,
   resettingAtom,
 } from "../../../atoms/sprite.atom";
-import { useAtom, useSetAtom } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import DraggableSpirit from "../../../components/DraggableSpirit";
-import { images } from "../../../static-data/images";
 
-const initVals = [
-  {
-    title: "cat",
-    img: images.cat,
-    action: 0,
-  },
-];
 export default function PlayArea() {
-  const [sprite, setSprite] = useAtom(spriteAtom);
-  useLayoutEffect(() => {
-    setSprite(initVals);
-  }, []);
+  const sprites = useAtomValue(spriteAtom);
   const [animating, setAnimating] = useAtom(animatingAtom);
   const setResetting = useSetAtom(resettingAtom);
   const isDisabled = animating.reduce((acc, curr) => acc || curr, false);
@@ -37,8 +25,8 @@ export default function PlayArea() {
         alignItems: "center",
       }}
     >
-      {sprite?.map?.((sprite, i) => {
-        return <DraggableSpirit key={i} index={i} spirit={sprite} />;
+      {sprites?.map?.((sprite, i) => {
+        return <DraggableSpirit key={sprite.id} index={i} spirit={sprite} />;
       })}
       <IconButton
         icon={

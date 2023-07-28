@@ -17,7 +17,7 @@ export default function Spirits({ navigation }: any) {
           if (sprite.addIcon) return <AddSpirit />;
           return (
             <Spirit
-              key={index}
+              key={sprite.id}
               spirit={sprite.title}
               img={sprite.img}
               index={index}

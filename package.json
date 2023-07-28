@@ -19,6 +19,7 @@
     "expo-status-bar": "~1.4.4",
     "jotai": "^2.2.2",
     "native-base": "^3.4.28",
+    "patch-package": "^8.0.0",
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-native-draggable-flatlist": "^4.0.1",

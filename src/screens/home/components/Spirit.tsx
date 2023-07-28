@@ -24,7 +24,7 @@ export default function Spirit({
   index: number;
 }) {
   const [selected, setSelected] = useAtom(selectedAtom);
-  const [sprite, setSprite] = useAtom(spriteAtom);
+  const [sprites, setSprites] = useAtom(spriteAtom);
   const animating = useAtomValue(animatingAtom);
   const setValuesAtom = useSetAtom(valuesAtom);
   const setAnimating = useSetAtom(animatingAtom);
@@ -34,16 +34,16 @@ export default function Spirit({
   };
 
   const onRemoveSprite = () => {
-    if (sprite.length > 1) {
-      setSprite((prev) => {
-        return prev.filter((sprite, i) => index !== i);
+    if (sprites?.length > 1) {
+      setSprites((prev) => {
+        return prev.filter((sprite, i) => sprites[index].id !== sprite.id);
       });
       setValuesAtom((prev) => {
-        const temp = prev.filter((sprite, i) => index !== i);
+        const temp = prev.filter((values, i) => index !== i);
         return temp;
       });
       setAnimating((prev) => {
-        return prev.filter((sprite, i) => index !== i);
+        return prev.filter((animate, i) => index !== i);
       });
       setSelected(0);
     }

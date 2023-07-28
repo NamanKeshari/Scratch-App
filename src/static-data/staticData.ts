@@ -1,3 +1,4 @@
+import { random } from "../utils/helper.utils";
 import { images } from "./images";
 
 export const spritesArr = [
@@ -34,6 +35,15 @@ export const spritesArr = [
   {
     title: "chair",
     img: images.chair,
+    action: 0,
+  },
+];
+
+export const initSpritesVals = [
+  {
+    id: random() + "cat",
+    title: "cat",
+    img: images.cat,
     action: 0,
   },
 ];

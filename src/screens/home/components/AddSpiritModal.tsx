@@ -8,6 +8,7 @@ import spriteAtom, {
   valuesAtom,
 } from "../../../atoms/sprite.atom";
 import { TouchableOpacity } from "react-native";
+import { random } from "../../../utils/helper.utils";
 
 const AddSpiritModal = ({
   showModal,
@@ -24,7 +25,8 @@ const AddSpiritModal = ({
   const onAdd = (i: number) => {
     let length = 0;
     setSprites((prev) => {
-      const temp = [...prev, spritesArr[i]];
+      const newSprite = { ...spritesArr[i] };
+      const temp = [...prev, { id: random() + newSprite.title, ...newSprite }];
       length = temp.length;
       return temp;
     });
